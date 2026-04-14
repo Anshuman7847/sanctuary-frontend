@@ -1,6 +1,6 @@
 
 import axios from "axios";
 export const axiosInstance = axios.create({
-    baseURL: "http://localhost:9080/",
+    baseURL: "https://sanctuary-backend-3m0s.onrender.com/",
     withCredentials: true,
 });
