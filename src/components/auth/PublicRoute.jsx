@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Navigate } from 'react-router-dom';
 import { axiosInstance } from '../../api/axiosinstance';
+import AuthLoadingScreen from './AuthLoadingScreen';
 
 const PublicRoute = ({ children }) => {
   const [loading, setLoading] = useState(true);
@@ -16,7 +17,7 @@ const PublicRoute = ({ children }) => {
     return ()=>{ mounted=false }
   },[])
 
-  if(loading) return <div className="p-8">Checking authentication...</div>;
+  if(loading) return <AuthLoadingScreen />;
   if(authed) return <Navigate to="/dashboard" replace />;
   return children;
 }
