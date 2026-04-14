@@ -22,7 +22,7 @@ export const routes = createBrowserRouter([
         element: <Layout />,
         children: [
 
-            { path: "/", element: <Navigate to="/home" replace /> },
+            
 
             {
                 path: "/dashboard",
@@ -87,7 +87,7 @@ export const routes = createBrowserRouter([
                 )
             },
             {
-                path:"/home",
+                path:"/",
                 element:<PublicRoute>
                     <Home/>
                 </PublicRoute>
